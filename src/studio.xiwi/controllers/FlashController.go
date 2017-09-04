@@ -23,5 +23,6 @@ func Flash(c iris.Context) {
 
 	result.Data = flash
 	result.Msg = msg
-	c.JSON(result)
+	// c.JSON(result)
+	c.ServeFile("./../asserts/douban.json", true)
 }
